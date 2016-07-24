@@ -1,6 +1,6 @@
-FROM jetty:latest
+FROM tomcat:8-jre8
 
-RUN mkdir -p /home/jetty
-RUN mkdir -p /home/jetty/pwm-data
+RUN mkdir /home/tomcat
+RUN mkdir /home/tomcat/pwm-data
 
-VOLUME /home/jetty
+VOLUME /home/tomcat
