@@ -6,3 +6,5 @@ RUN mkdir /home/tomcat
 RUN chown tomcat:tomcat /opt/pwm-data
 RUN chown tomcat:tomcat /home/tomcat
 VOLUME /home/tomcat
+
+CMD systemctly start tomcat.service
