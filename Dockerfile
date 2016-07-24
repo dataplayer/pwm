@@ -1,6 +1,4 @@
-FROM tomcat:8-jre8
+FROM centos:latest
 
-RUN mkdir /home/tomcat
-RUN mkdir /home/tomcat/pwm-data
+RUN yum install jdk1.8.0_91
 
-VOLUME /home/tomcat
