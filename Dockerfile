@@ -7,4 +7,4 @@ RUN chown tomcat:tomcat /opt/pwm-data
 RUN chown tomcat:tomcat /home/tomcat
 VOLUME /home/tomcat
 
-CMD systemctly start tomcat.service
+CMD systemctl start tomcat.service
