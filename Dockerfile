@@ -5,5 +5,8 @@ RUN mkdir /opt/pwm-data
 RUN mkdir /home/tomcat
 RUN chown tomcat:tomcat /opt/pwm-data
 RUN chown tomcat:tomcat /home/tomcat
+ENV NAME tomcat
 ENV CATALINA_BASE /usr/share/tomcat
 VOLUME /home/tomcat
+
+CMD tomcat start && tail -f /var/log/tomcat/catalina.out
