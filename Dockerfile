@@ -8,5 +8,5 @@ RUN chown tomcat:tomcat /home/tomcat
 ENV NAME tomcat
 ENV CATALINA_BASE /usr/share/tomcat
 VOLUME /home/tomcat
-
+EXPOSE 8080
 CMD tomcat start && tail -f /var/log/tomcat/catalina.out
