@@ -1,12 +1,5 @@
-FROM centos:latest
+FROM tomcat:8-jre8
 
-RUN yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-headless tomcat
-RUN mkdir /opt/pwm-data
 RUN mkdir /home/tomcat
-RUN chown tomcat:tomcat /opt/pwm-data
-RUN chown tomcat:tomcat /home/tomcat
-ENV NAME tomcat
-ENV CATALINA_BASE /usr/share/tomcat
+RUN mkdir /usr/local/tomcat/pwm-data
 VOLUME /home/tomcat
-EXPOSE 8080
-CMD tomcat start && tail -f /var/log/tomcat/catalina.out
